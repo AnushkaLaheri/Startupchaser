@@ -1,8 +1,0 @@
-[
-    {
-        "image": "demos/*",
-        "resize": {
-            "width": 1440
-        }
-    }
-]
