@@ -97,7 +97,7 @@ export default function Header6({ staticPosition = false }) {
                   <ul className="uc-navbar-nav gap-3 d-none lg:d-flex ltr:ms-2 rtl:me-2">
                     <li className="has-dd-menu ">
                       <a href="#" role="button" aria-haspopup="true">
-                        Products{" "}
+                        Projects {" "}
                         <span
                           data-uc-navbar-parent-icon=""
                           className="uc-icon uc-navbar-parent-icon"
