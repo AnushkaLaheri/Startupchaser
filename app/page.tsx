@@ -160,7 +160,7 @@ export default function HomePage() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <Link
-                href="/find-job"
+                href="/findjob"
                 className={`hover:text-blue-400 transition-all duration-300 hover:scale-105 ${
                   isDark ? "text-gray-300 hover:text-blue-400" : "text-gray-700 hover:text-blue-600"
                 }`}
@@ -223,7 +223,7 @@ export default function HomePage() {
           >
             <nav className="px-4 py-4 space-y-4">
               <Link
-                href="/find-job"
+                href="/findjob"
                 className={`block hover:text-blue-400 transition-colors duration-300 ${
                   isDark ? "text-gray-300" : "text-gray-700"
                 }`}
@@ -327,7 +327,7 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-delayed-3">
-                <Link href="/find-job">
+                <Link href="/findjob">
                   <Button
                     size="lg"
                     className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 text-lg rounded-full transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl animate-bounce-subtle"
@@ -409,7 +409,7 @@ export default function HomePage() {
                     </p>
 
                     <div className="flex gap-3 relative z-10">
-                      <Link href="/find-job" className="flex-1">
+                      <Link href="/findjob" className="flex-1">
                         <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white transform hover:scale-105 transition-all duration-300">
                           Join Project
                         </Button>
@@ -773,7 +773,7 @@ export default function HomePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link href="/find-job">
+              <Link href="/findjob">
                 <Button
                   size="lg"
                   className="bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-700 px-8 py-4 text-lg rounded-full transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl animate-bounce-subtle"
@@ -853,7 +853,7 @@ export default function HomePage() {
                 <ul className="space-y-2">
                   <li>
                     <Link
-                      href="/find-job"
+                      href="/findjob"
                       className={`hover:text-blue-400 transition-all duration-300 hover:translate-x-1 ${
                         isDark ? "text-gray-300" : "text-gray-600"
                       }`}
