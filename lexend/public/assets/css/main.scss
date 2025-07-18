@@ -1,0 +1,16 @@
+@use "sass:meta";
+/* Import uni-core components */
+@import url("./uni-core.min.css");
+
+/* Import additional styles */
+@import url("./unicons.min.css");
+@import url("./prettify.min.css");
+@import url("./swiper-bundle.min.css");
+
+/* Import main style */
+@import url("./theme/main.min.purge.css");
+
+@include meta.load-css("theme/theme-three.min.purge.scss");
+@include meta.load-css("theme/theme-four.min.purge.scss");
+@include meta.load-css("theme/theme-five.min.purge.scss");
+@include meta.load-css("theme/theme-six.min.purge.scss");

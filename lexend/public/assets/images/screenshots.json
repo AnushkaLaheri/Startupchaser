@@ -1,0 +1,9 @@
+[
+    {
+        "pages": "*/*",
+        "width": 1440,
+        "height": 1500,
+        "fullPage": false,
+        "darkMode": false
+    }
+]

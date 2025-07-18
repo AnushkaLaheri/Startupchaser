@@ -1,0 +1,105 @@
+/* Import: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=Inter:wght@300..700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap');
+
+
+/* Import: Graphik */
+@font-face {
+    font-family: "Graphik";
+    src: local("Graphik Regular"),
+         url('../fonts/graphik/Graphik-Regular.woff2'),
+         url('../fonts/graphik/Graphik-Regular.woff');
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+    ascent-override: 100%;
+}
+
+@font-face {
+    font-family: "Graphik";
+    src: local("Graphik Medium"),
+         url('../fonts/graphik/Graphik-Medium.woff2'),
+         url('../fonts/graphik/Graphik-Medium.woff');
+    font-weight: 500;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+    ascent-override: 100%;
+}
+
+@font-face {
+    font-family: "Graphik";
+    src: local("Graphik Semibold"),
+         url('../fonts/graphik/Graphik-Semibold.woff2'),
+         url('../fonts/graphik/Graphik-Semibold.woff');
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+    ascent-override: 100%;
+}
+
+
+/* Import: Mabry Pro */
+@font-face {
+    font-family: "Mabry Pro";
+    src: local("Mabry Pro Regular"),
+         url('../fonts/mabry-pro/MabryPro-Regular.woff2'),
+         url('../fonts/mabry-pro/MabryPro-Regular.woff');
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+    ascent-override: 90%;
+}
+
+@font-face {
+    font-family: "Mabry Pro";
+    src: local("Mabry Pro Bold"),
+         url('../fonts/mabry-pro/MabryPro-Bold.woff2'),
+         url('../fonts/mabry-pro/MabryPro-Bold.woff');
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+    ascent-override: 90%;
+}
+
+/* Import: Degular Display */
+@font-face {
+    font-family: "Degular Display";
+    src: local("Degular Display Semidbold"),
+         url('../fonts/degular-display/DegularDisplay-Semibold.woff2');
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+    ascent-override: 100%;
+}
+
+
+/* Import: Sharp Grotesk Display */
+@font-face {
+    font-family: "Sharp Grotesk";
+    src: local("Sharp Grotesk Medium"),
+         url('../fonts/sharp-grotesk/SharpGrotesk-Medium.woff2');
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+    ascent-override: 100%;
+}
+
+
+/* Import: PolySans */
+@font-face {
+    font-family: "PolySans";
+    src: local("PolySans Normal"),
+         url('../fonts/polysans/PolySans-Normal.ttf');
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+    ascent-override: 100%;
+}
+@font-face {
+    font-family: "PolySans";
+    src: local("PolySans Bold"),
+         url('../fonts/polysans/PolySans-Medium.woff2');
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
+    ascent-override: 100%;
+}
