@@ -22,7 +22,7 @@ export default function HeroSection() {
   }, [theme])
 
   return (
-    <section className={`text-foreground min-h-[90vh] flex flex-col items-center px-4 md:px-16 relative py-10 ${
+    <section className={`bg-gradient-to-br from-orange-300 via-white to-orange-400 dark:bg-background text-foreground min-h-[90vh] flex flex-col items-center px-4 md:px-16 relative py-10 ${
         isDark
           ? "bg-background"
           : "bg-gradient-to-br from-orange-300 via-white to-orange-400"
