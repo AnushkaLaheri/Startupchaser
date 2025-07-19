@@ -322,6 +322,7 @@ html {
 .marquee-container {
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 .marquee-track {
