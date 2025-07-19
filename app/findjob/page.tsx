@@ -13,6 +13,7 @@ import PricingSection from "../components/PricingSection"
 import ConnectMentorSection from "../components/mentor"
 import Testimonials from "../components/testimonial"
 import TopInterns from "../components/TopInterns"
+import Footer from "../components/footer"
 
 
 interface Project {
@@ -136,6 +137,7 @@ export default function FindJobPage() {
     <ConnectMentorSection/>
     <Testimonials/>
     <TopInterns/>
+    <Footer/>
     </main>
     
   )
