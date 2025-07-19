@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHexagonNodes } from "@fortawesome/free-solid-svg-icons"
 import PricingSection from "../components/PricingSection"
 import ConnectMentorSection from "../components/mentor"
-import ProjectTimeline from "../components/Timeline"
+import Testimonials from "../components/testimonial"
 import TopInterns from "../components/TopInterns"
 
 
@@ -134,7 +134,7 @@ export default function FindJobPage() {
     </div>
     <PricingSection/>
     <ConnectMentorSection/>
-    <ProjectTimeline/>
+    <Testimonials/>
     <TopInterns/>
     </main>
     

@@ -5,7 +5,9 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Moon, Sun, Menu, X } from "lucide-react"
 import { useTheme } from "next-themes"
-
+import logo_dark from "../../public/logo_dark.png"
+import Image from "next/image"
+import logo_light from "../../public/logo_light.png"
 export default function Header() {
   const [scrollY, setScrollY] = useState(0)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -19,10 +21,11 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const isDark = resolvedTheme === "dark"
+const isDark = mounted && resolvedTheme === "dark"
 
-  return (
-    <header
+
+  return mounted ? (
+     <header
       className={`fixed top-0 w-full z-50 backdrop-blur-md border-b transition-all duration-500 ${
         isDark
           ? "bg-gray-900/90 border-gray-800 shadow-lg shadow-gray-900/20"
@@ -32,13 +35,19 @@ export default function Header() {
         transform: `translateY(${Math.min(scrollY * 0.5, 20)}px)`,
       }}
     >
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-12 flex items-center justify-between">
         <Link
-          href="/"
-          className="text-2xl font-bold bg-gradient-to-r from-orange-400 via-white to-gray-800 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300"
-        >
-          StartupChaser
-        </Link>
+  href="/"
+  className="text-2xl font-bold hover:scale-105 transition-transform duration-300"
+>
+  
+  <Image
+    src={isDark ? logo_dark : logo_light}
+    alt="Site Logo"
+    className="h-20 w-auto"
+  />
+</Link>
+
 
         <nav className="hidden md:flex items-center space-x-8">
           {["findjob", "hire-team"].map((path, i) => (
@@ -124,5 +133,6 @@ export default function Header() {
         </nav>
       </div>
     </header>
-  )
+  
+  ) : null
 }
