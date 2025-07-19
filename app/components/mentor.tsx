@@ -16,7 +16,7 @@ export default function ConnectMentorSection() {
             Whether you're just starting out or pivoting your path, our mentors are here to help.
           </p>
           <Link href="/connect">
-            <button className="px-6 py-3 bg-primary rounded-lg shadow-md hover:shadow-lg transition duration-300 font-medium">
+            <button className="px-6 py-3 bg-orange-600 rounded-lg shadow-md hover:shadow-lg transition duration-300 font-medium">
               Connect Now
             </button>
           </Link>

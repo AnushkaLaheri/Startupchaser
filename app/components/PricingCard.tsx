@@ -30,7 +30,7 @@ export default function PricingCard({
       <h3 className="text-lg font-semibold mb-2">{title}</h3>
       <div className="text-3xl font-bold mb-2">{price} <span className="text-base font-normal">/mo</span></div>
       <p className="text-muted-foreground text-sm mb-4">{description}</p>
-      <Button className="w-full mb-2">{ctaText}</Button>
+      <Button className="w-full mb-2 bg-orange-600 hover:bg-orange-700">{ctaText}</Button>
       <p className="text-xs text-muted-foreground text-center mb-4">Billed annually.</p>
       <ul className="space-y-2 text-sm">
         {features.map((feature, idx) => (

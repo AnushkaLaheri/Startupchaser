@@ -10,6 +10,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHexagonNodes } from "@fortawesome/free-solid-svg-icons"
 import PricingSection from "../components/PricingSection"
 import ConnectMentorSection from "../components/mentor"
+import ProjectTimeline from "../components/Timeline"
+import TopInterns from "../components/TopInterns"
 
 
 interface Project {
@@ -120,7 +122,7 @@ export default function FindJobPage() {
                 <span className="font-semibold text-foreground">{project.stipend}</span>
               </div>
                 {/* <div className="relative"> */}
-              <Button className="w-full font-medium">Apply Now</Button>
+              <Button className="w-full font-medium bg-orange-600 hover:bg-orange-700">Apply Now</Button>
 
                 {/* </div> */}
             </CardContent>
@@ -130,6 +132,8 @@ export default function FindJobPage() {
     </div>
     <PricingSection/>
     <ConnectMentorSection/>
+    <ProjectTimeline/>
+    <TopInterns/>
     </main>
     
   )

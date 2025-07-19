@@ -28,7 +28,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
       className={`fixed top-0 w-full z-50 backdrop-blur-md border-b transition-all duration-500 ${
         isDark
           ? "bg-gray-900/90 border-gray-800 shadow-lg shadow-gray-900/20"
-          : "bg-white/90 border-gray-200 shadow-lg shadow-gray-900/10"
+          : "bg-orange-300 border-gray-200 shadow-lg shadow-gray-900/10"
       }`}
       style={{
         transform: `translateY(${Math.min(scrollY * 0.5, 20)}px)`,
@@ -37,7 +37,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link
           href="/"
-          className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300"
+          className="text-2xl font-bold bg-gradient-to-r from-orange-400 via-white to-gray-800 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300"
         >
           StartupChaser
         </Link>
@@ -48,10 +48,10 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
             <Link
               key={i}
               href={`/${path}`}
-              className={`hover:text-blue-400 transition-all duration-300 hover:scale-105 ${
+              className={`hover:text-orange-600 transition-all duration-300 hover:scale-105 ${
                 isDark
-                  ? "text-gray-300 hover:text-blue-400"
-                  : "text-gray-700 hover:text-blue-600"
+                  ? "text-gray-300 hover:text-orange-600"
+                  : "text-gray-700 hover:text-orange-700"
               }`}
             >
               {path === "findjob" ? "Find Internships" : "Hire Interns"}
@@ -61,10 +61,10 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
             <Link
               key={i}
               href="#"
-              className={`hover:text-blue-400 transition-all duration-300 hover:scale-105 ${
+              className={`hover:text-orange-600 transition-all duration-300 hover:scale-105 ${
                 isDark
-                  ? "text-gray-300 hover:text-blue-400"
-                  : "text-gray-700 hover:text-blue-600"
+                  ? "text-gray-300 hover:text-orange-600"
+                  : "text-gray-700 hover:text-orange-700"
               }`}
             >
               {label}
@@ -80,9 +80,9 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
             className="rounded-full hover:scale-110 transition-all duration-300 hover:rotate-180"
           >
             {isDark ? (
-              <Sun className="h-5 w-5 text-yellow-400" />
+              <Sun className="h-5 w-5 text-orange-600" />
             ) : (
-              <Moon className="h-5 w-5 text-blue-600" />
+              <Moon className="h-5 w-5 text-orange-600" />
             )}
           </Button>
 
@@ -118,7 +118,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
             <Link
               key={i}
               href={item.href}
-              className={`block hover:text-blue-400 transition-colors duration-300 ${
+              className={`block hover:text-orange-600 transition-colors duration-300 ${
                 isDark ? "text-gray-300" : "text-gray-700"
               }`}
               onClick={() => setIsMobileMenuOpen(false)}

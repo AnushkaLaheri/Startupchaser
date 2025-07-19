@@ -9,10 +9,24 @@ import hero_man from "../../public/hero_man.webp";
 import findjob_woman from "../../public/findjob-woman.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 export default function HeroSection() {
+
+   const { theme } = useTheme()
+  const [isDark, setIsDark] = useState(false)
+
+  useEffect(() => {
+    setIsDark(theme === "dark")
+  }, [theme])
+
   return (
-    <section className="bg-background text-foreground min-h-[90vh] flex flex-col items-center px-4 md:px-16 relative py-10">
+    <section className={`text-foreground min-h-[90vh] flex flex-col items-center px-4 md:px-16 relative py-10 ${
+        isDark
+          ? "bg-background"
+          : "bg-gradient-to-br from-orange-300 via-white to-orange-400"
+      }`}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full animate-fade-in">
         {/* Left Content */}
         <div className="space-y-6 max-w-xl">
@@ -31,7 +45,7 @@ export default function HeroSection() {
               placeholder="Enter your email"
               className="max-w-xs"
             />
-            <Button className="bg-emerald-700 hover:bg-emerald-800 text-white">
+            <Button className="bg-orange-600 hover:bg-orange-700 text-white">
               Get a demo
             </Button>
           </div>
@@ -106,7 +120,7 @@ export default function HeroSection() {
                 <span>Google</span>
               </li>
             </ul>
-            <Button className="w-full mt-4">Log in</Button>
+            <Button className="w-full mt-4 bg-orange-600 hover:bg-orange-700 text-white">Log in</Button>
           </div>
 
           {/* Floating username card */}
