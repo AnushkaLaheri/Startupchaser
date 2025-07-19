@@ -97,6 +97,38 @@
   .animate-scale-pulse {
     animation: scalePulse 2s ease-in-out infinite;
   }
+ 
+  .animate-fade-left {
+    animation: fadeLeft 0.8s ease-out both;
+  }
+
+  .animate-fade-right {
+    animation: fadeRight 0.8s ease-out both;
+  }
+
+  
+
+@keyframes fadeLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeRight {
+    0% {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
   @keyframes fadeInUp {
     from {

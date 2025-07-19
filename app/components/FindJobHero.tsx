@@ -1,4 +1,3 @@
-// app/components/HeroSection.tsx
 "use client";
 
 import Image from "next/image";
@@ -13,39 +12,40 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 export default function HeroSection() {
-
-   const { theme } = useTheme()
-  const [isDark, setIsDark] = useState(false)
+  const { theme } = useTheme();
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    setIsDark(theme === "dark")
-  }, [theme])
+    setIsDark(theme === "dark");
+  }, [theme]);
 
   return (
-    <section className={`text-foreground min-h-[90vh] flex flex-col items-center px-4 md:px-16 relative py-10 ${
+    <section
+      className={`text-foreground min-h-[90vh] flex flex-col items-center px-4 md:px-16 relative py-10 ${
         isDark
           ? "bg-background"
           : "bg-gradient-to-br from-orange-300 via-white to-orange-400"
-      }`}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full animate-fade-in">
+      }`}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full max-w-7xl animate-fade-in">
         {/* Left Content */}
-        <div className="space-y-6 max-w-xl">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+        <div className="space-y-6 max-w-xl py-20">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
             Get that Industrial <br /> Experience
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground">
             Unlock your productivity potential with our intuitive and powerful
             project categories. Get real-world experience working on real-time
             data guided by industry mentors.
           </p>
 
-          <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-2">
             <Input
               type="email"
               placeholder="Enter your email"
-              className="max-w-xs"
+              className="max-w-xs w-full"
             />
-            <Button className="bg-orange-600 hover:bg-orange-700 text-white">
+            <Button className="bg-orange-600 hover:bg-orange-700 text-white w-full sm:w-auto">
               Get a demo
             </Button>
           </div>
@@ -58,7 +58,7 @@ export default function HeroSection() {
             .
           </p>
 
-          <div className="flex items-center gap-2 mt-2">
+          <div className="flex items-center gap-3 mt-2 flex-wrap">
             <div className="flex -space-x-2">
               <Image
                 src={findjob_woman}
@@ -92,16 +92,16 @@ export default function HeroSection() {
         </div>
 
         {/* Right Image & UI Mockup */}
-        <div className="relative w-[600px] h-[600px]">
+        <div className="relative w-full max-w-[600px] mx-auto md:mx-0 animate-fade-left">
           <Image
             src={hero_man}
             alt="Hero person"
-            width={600}
-            className="rounded-xl object-cover"
+            className="w-full h-auto rounded-xl object-cover"
+            priority
           />
 
           {/* Floating card */}
-          <div className="absolute top-16 left-[-70px] bg-white dark:bg-muted p-6 rounded-xl shadow-md w-[200px]">
+          <div className="absolute top-8 left-0 sm:left-[-50px] bg-white dark:bg-muted p-6 rounded-xl shadow-md w-[200px]">
             <div className="font-semibold text-sm text-muted-foreground mb-2">
               Search companies..
             </div>
@@ -111,7 +111,6 @@ export default function HeroSection() {
               </li>
               <li className="flex justify-between items-center">
                 <span>Infosys</span>
-                {/* <span></span> */}
               </li>
               <li className="flex justify-between items-center">
                 <span>IBM</span>
@@ -120,11 +119,13 @@ export default function HeroSection() {
                 <span>Google</span>
               </li>
             </ul>
-            <Button className="w-full mt-4 bg-orange-600 hover:bg-orange-700 text-white">Log in</Button>
+            <Button className="w-full mt-4 bg-orange-600 hover:bg-orange-700 text-white">
+              Log in
+            </Button>
           </div>
 
           {/* Floating username card */}
-          <div className="absolute bottom-6 right-6 bg-white dark:bg-muted p-3 rounded-xl shadow-md flex items-center gap-3">
+          {/* <div className="absolute bottom-4 right-4 bg-white dark:bg-muted p-3 rounded-xl shadow-md flex items-center gap-3">
             <Image
               src={findjob_woman}
               alt="user"
@@ -136,27 +137,26 @@ export default function HeroSection() {
               <p className="text-xs text-muted-foreground">Username</p>
               <p className="font-medium text-sm">James Doe</p>
             </div>
-          </div>
+          </div> */}
         </div>
-
-        {/* Trusted by Companies */}
-        
       </div>
-      <div className="mt-20 text-center w-full">
-          <h2 className="text-4xl md:text-4xl font-semibold mb-8">
-            14,000+ customers large and small rely on us for trust &
-            transformation
-          </h2>
-          <div className="flex flex-wrap justify-center gap-6 text-muted-foreground text-xl">
-            <span>Google</span>
-            <span>Microsoft</span>
-            <span>Amazon</span>
-            <span>TCS</span>
-            <span>Infosys</span>
-            <span>Wipro</span>
-            <span>IBM</span>
-          </div>
+
+      {/* Trusted by Companies */}
+      <div className="mt-20 text-center w-full px-2">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8">
+          14,000+ customers large and small rely on us for trust &
+          transformation
+        </h2>
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-muted-foreground text-lg sm:text-xl">
+          <span>Google</span>
+          <span>Microsoft</span>
+          <span>Amazon</span>
+          <span>TCS</span>
+          <span>Infosys</span>
+          <span>Wipro</span>
+          <span>IBM</span>
         </div>
+      </div>
     </section>
   );
 }

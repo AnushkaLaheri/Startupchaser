@@ -2,32 +2,45 @@
 
 import { useEffect } from "react"
 import { motion, useAnimation } from "framer-motion"
+import Image from "next/image"
 import { FaLinkedin } from "react-icons/fa"
+import pfp1_f from "../../public/pfp4F.avif"
+import pfp2_f from "../../public/pfp5f.jpeg"
+import pfp3_f from "../../public/pfp6f.png"
+import pfp4 from "../../public/pfp8.jpg"
+import pfp5 from "../../public/pfp3.webp"
+
 
 const interns = [
   {
-    name: "Lakshit Tiwari",
+    name: "Lakshita Tiwari",
     role: "Web Developer Intern",
-    image: "/path/to/image.jpg",
+    image: pfp1_f,
     linkedin: "https://linkedin.com/in/lakshit",
   },
   {
     name: "Sanya Mehta",
     role: "Product Intern",
     linkedin: "https://www.linkedin.com/in/sanyamehta",
-    image: "https://randomuser.me/api/portraits/women/44.jpg"
+    image: pfp2_f
   },
   {
     name: "Ishaan Verma",
     role: "Backend Developer Intern",
     linkedin: "https://www.linkedin.com/in/ishaanverma",
-    image: "https://randomuser.me/api/portraits/men/45.jpg"
+    image: pfp4
   },
   {
     name: "Ritika Singh",
     role: "Marketing Intern",
     linkedin: "https://www.linkedin.com/in/ritikasingh",
-    image: "https://randomuser.me/api/portraits/women/32.jpg"
+    image: pfp3_f
+  },
+  {
+    name: "Rohan Verma",
+    role: "Backend Developer Intern",
+    linkedin: "https://www.linkedin.com/in/ishaanverma",
+    image: pfp5
   }
 ]
 
@@ -48,7 +61,7 @@ const TopInterns = () => {
 
   return (
     <section className="py-16 bg-background border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 text-center">
+      <div className="max-w-7xl mx-auto px-4 text-center animate-fade-in">
         <h2 className="text-3xl font-bold mb-8">Meet Our Star Interns</h2>
 
         <div className="relative overflow-hidden w-full py-6 marquee-container">
@@ -61,7 +74,7 @@ const TopInterns = () => {
                 key={index}
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 min-w-[220px] max-w-[220px] flex-shrink-0 flex flex-col items-center text-center hover:shadow-lg transition duration-300"
               >
-                <img
+                <Image
                   src={intern.image}
                   alt={intern.name}
                   className="w-20 h-20 rounded-full object-cover mb-3"
