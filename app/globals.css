@@ -205,7 +205,6 @@
   /* Gradient Borders */
   .gradient-border {
     position: relative;
-    background-color: transparent;
     background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6);
     padding: 2px;
     border-radius: 12px;
@@ -309,29 +308,4 @@ html {
     box-shadow: none !important;
     text-shadow: none !important;
   }
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.marquee-container {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 30s linear infinite;
-}
-
-.marquee-container:hover .marquee-track {
-  animation-play-state: paused;
 }
