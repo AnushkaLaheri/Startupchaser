@@ -261,7 +261,7 @@ export default function HomePage() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <Link
-                href="/find-job"
+                href="/findjob"
                 className={`hover:text-[#ff6600] transition-all duration-300 hover:scale-105 ${
                 isDark ? "text-gray-300 hover:text-[#ff6600]" : "text-[#0d0d0d] hover:text-[#ff6600]"
                 }`}
@@ -324,7 +324,7 @@ export default function HomePage() {
           >
             <nav className="px-4 py-4 space-y-4">
               <Link
-                href="/find-job"
+                href="/findjob"
                 className={`block hover:text-[#ff6600] transition-colors duration-300 ${
                 isDark ? "text-gray-300" : "text-[#0d0d0d]"
                 }`}
@@ -451,7 +451,7 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-delayed-3 mb-16">
-                <Link href="/find-job">
+                <Link href="/findjob">
                   <Button
                     size="lg"
                     className="bg-[#ff6600] hover:bg-[#e65c00] text-white px-8 py-4 text-lg rounded-full transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-2xl animate-bounce-subtle"

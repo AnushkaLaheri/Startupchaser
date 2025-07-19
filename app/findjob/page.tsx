@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Clock, Building2 } from "lucide-react"
+import Header from "../components/Header"
 import HeroSection from "../components/FindJobHero"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHexagonNodes } from "@fortawesome/free-solid-svg-icons"
@@ -75,6 +76,7 @@ export default function FindJobPage() {
 
   return (
     <main>
+      <Header/>
       <HeroSection/>
       <div className="min-h-screen bg-grid-pattern bg-background text-foreground py-40 px-4 md:px-16">
       <div className="text-center max-w-3xl mx-auto">
