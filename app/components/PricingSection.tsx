@@ -24,7 +24,7 @@ export default function PricingSection() {
 
         <PricingCard
           title="Pro"
-          price="Rs. 11999"
+          price="Rs. 14999"
           description="For seamless integrations and sending tools in bulk."
           ctaText="Start a free trial"
           popular

@@ -4,24 +4,22 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Moon, Sun, Menu, X } from "lucide-react"
+import { useTheme } from "next-themes"
 
-interface HeaderProps {
-  isDark: boolean
-  toggleTheme: () => void
-}
-
-export default function Header({ isDark, toggleTheme }: HeaderProps) {
+export default function Header() {
   const [scrollY, setScrollY] = useState(0)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const { resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
-
+    setMounted(true)
+    const handleScroll = () => setScrollY(window.scrollY)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const isDark = resolvedTheme === "dark"
 
   return (
     <header
@@ -42,7 +40,6 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
           StartupChaser
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {["findjob", "hire-team"].map((path, i) => (
             <Link
@@ -73,20 +70,23 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
         </nav>
 
         <div className="flex items-center space-x-4">
-          <Button
-            onClick={toggleTheme}
-            variant="ghost"
-            size="icon"
-            className="rounded-full hover:scale-110 transition-all duration-300 hover:rotate-180"
-          >
-            {isDark ? (
-              <Sun className="h-5 w-5 text-orange-600" />
-            ) : (
-              <Moon className="h-5 w-5 text-orange-600" />
-            )}
-          </Button>
+          {mounted && (
+            <Button
+              onClick={() =>
+                setTheme(resolvedTheme === "dark" ? "light" : "dark")
+              }
+              variant="ghost"
+              size="icon"
+              className="rounded-full hover:scale-110 transition-all duration-300 hover:rotate-180"
+            >
+              {isDark ? (
+                <Sun className="h-5 w-5 text-orange-600" />
+              ) : (
+                <Moon className="h-5 w-5 text-orange-600" />
+              )}
+            </Button>
+          )}
 
-          {/* Mobile Menu Button */}
           <Button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             variant="ghost"
@@ -109,12 +109,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
         } ${isDark ? "bg-gray-800/95" : "bg-white/95"} backdrop-blur-md`}
       >
         <nav className="px-4 py-4 space-y-4">
-          {[
-            { href: "/findjob", label: "Find Internships" },
-            { href: "/hire-team", label: "Hire Interns" },
-            { href: "#", label: "About" },
-            { href: "#", label: "Contact" },
-          ].map((item, i) => (
+          {[{ href: "/findjob", label: "Find Internships" }, { href: "/hire-team", label: "Hire Interns" }, { href: "#", label: "About" }, { href: "#", label: "Contact" }].map((item, i) => (
             <Link
               key={i}
               href={item.href}
